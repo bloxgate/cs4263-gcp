@@ -174,6 +174,7 @@ There is currently an existing deployment of these services, available at these 
    1. `sudo mkdir -p /opt/rng/java`
    2. `sudo mkdir -p /opt/rng/python`
    3. Use the upload files option in the Cloud Shell to upload both `.tar.gz` files
+      1. Go to the cog in the top right corner of your VM shell, Upload files is an option in the drop down menu.
    4. `sudo tar xvf random-number-generator.tar.gz -C /opt/rng/python/`
    5. `sudo tar xvf random-number-generator-java.tar.gz -C /opt/rng/java/`
    6. `sudo chown -R root:root /opt/rng`
