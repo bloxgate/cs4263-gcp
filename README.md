@@ -23,6 +23,8 @@ There is currently an existing deployment of these services, available at these 
 * Java: http://java.se.gmaddra.me
 * Python: http://python.se.gmaddra.me
 
+**Note: The original source code was located in GCP source repositories which [cannot be made public,](https://cloud.google.com/source-repositories/docs/configure-access-control#granting_member_access) so we've repuploaded the code into this repository for ease of use.**
+
 ### Authors
 
 * Sam Penwell
@@ -97,7 +99,7 @@ There is currently an existing deployment of these services, available at these 
    * If prompted, go ahead and enable Compute Engine for the project
 
 2. Create a g1-small instance running CentOS 7 with a 10 GB disk
-  ![Instance Configuration](https://github.com/bloxgate/cs4263-gcp/blob/image-addition/vm_creation.PNG)
+    ![Instance Configuration](https://github.com/bloxgate/cs4263-gcp/blob/image-addition/vm_creation.PNG)
 
    1. Enable HTTP and HTTPS traffic
    2. Assign a static IP address to your VM
