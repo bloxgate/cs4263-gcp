@@ -164,42 +164,42 @@ There is currently an existing deployment of these services, available at these 
       1. If successful: `sudo systemctl restart nginx`
       2. If there is a configuration error, double check that you updated the correct section
 
-   7. Upload our code
+7. Upload our code
 
-      1. `sudo mkdir -p /opt/rng/java`
-      2. `sudo mkdir -p /opt/rng/python`
-      3. Use the upload files option in the Cloud Shell to upload both `.tar.gz` files
-      4. `sudo tar xvf random-number-generator.tar.gz -C /opt/rng/python/`
-      5. `sudo tar xvf random-number-generator-java.tar.gz -C /opt/rng/java/`
-      6. `sudo chown -R root:root /opt/rng`
+   1. `sudo mkdir -p /opt/rng/java`
+   2. `sudo mkdir -p /opt/rng/python`
+   3. Use the upload files option in the Cloud Shell to upload both `.tar.gz` files
+   4. `sudo tar xvf random-number-generator.tar.gz -C /opt/rng/python/`
+   5. `sudo tar xvf random-number-generator-java.tar.gz -C /opt/rng/java/`
+   6. `sudo chown -R root:root /opt/rng`
 
-   8. Build the Java Application
+8. Build the Java Application
 
-      1. `sudo -s`
-      2. `cd /opt/rng/java`
-      3. `yum install -y dos2unix`
-      4. `dos2unix ./gradlew`
-      5. `./gradlew shadowJar`
-      6. `cp ./build/libs/rng-java-1.0-all.jar ./random-number-generator-java.jar`
-      7. `exit`
+   1. `sudo -s`
+   2. `cd /opt/rng/java`
+   3. `yum install -y dos2unix`
+   4. `dos2unix ./gradlew`
+   5. `./gradlew shadowJar`
+   6. `cp ./build/libs/rng-java-1.0-all.jar ./random-number-generator-java.jar`
+   7. `exit`
 
-   9. Install Python dependencies
+9. Install Python dependencies
 
-      1. `sudo python3 -m pip install -r /opt/rng/python/requirements.txt`
+   1. `sudo python3 -m pip install -r /opt/rng/python/requirements.txt`
 
-   10. Enable services:
+10. Enable services:
 
-       1. `sudo ln -s /opt/rng/java/rng-java.service /lib/systemd/system/rng-java.service`
-       2. `sudo ln -s /opt/rng/python/rng-python.service /lib/systemd/system/rng-python.service`
-       3. `sudo systemctl daemon-reload`
-       4. `sudo systemctl enable rng-java && sudo systemctl start rng-java`
-       5. `sudo systemctl enable rng-python && sudo systemctl start rng-python`
+    1. `sudo ln -s /opt/rng/java/rng-java.service /lib/systemd/system/rng-java.service`
+    2. `sudo ln -s /opt/rng/python/rng-python.service /lib/systemd/system/rng-python.service`
+    3. `sudo systemctl daemon-reload`
+    4. `sudo systemctl enable rng-java && sudo systemctl start rng-java`
+    5. `sudo systemctl enable rng-python && sudo systemctl start rng-python`
 
-   11. Your services will now be accessible
+11. Your services will now be accessible
 
-       1. Recall the external IP address you created earlier
-       2. The Java Application is available at `http://your.external.ip/java`
-       3. The Python Application is available at `http://your.external.ip/python`
+    1. Recall the external IP address you created earlier
+    2. The Java Application is available at `http://your.external.ip/java`
+    3. The Python Application is available at `http://your.external.ip/python`
 
 ### Server-side Testing
 
