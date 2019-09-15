@@ -1,0 +1,12 @@
+[Unit]
+Description=Random number generator in Java
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/java -Xmx128M -jar /opt/rng/java/random-number-generator-java.jar
+SuccessExitStatus=143
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Random number generator in Python
+After=network.target
+
+[Service]
+Type=simple
+Environment=PORT=4567
+ExecStart=/bin/python3 /opt/rng/python/main.py
+KillSignal=SIGQUIT
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
