@@ -160,7 +160,7 @@ There is currently an existing deployment of these services, available at these 
 
    5. Save and exit
 
-      1. `control-w` to save; `control-x` to exit
+      1. `control-o` to save; `control-x` to exit
 
    6. Verify your edits by running `sudo nginx -t`
 
