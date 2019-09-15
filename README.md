@@ -9,6 +9,20 @@ This document provides instructions on deploying a Random Number Generator into 
 * Generates a number in the range [1, 1000000]
 * Sufficiently random so that at least 750 of any 1000 numbers are unique
 
+### Existing Implementations
+
+There is currently an existing deployment of these services, available at these locations:
+
+#### App Engine
+
+* Java: http://java.ae.se.gmaddra.me
+* Python: http://python.ae.se.gmaddra.me
+
+#### Compute Engine
+
+* Java: http://java.se.gmaddra.me
+* Python: http://python.se.gmaddra.me
+
 ### Authors
 
 * Sam Penwell
