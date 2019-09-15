@@ -97,7 +97,7 @@ There is currently an existing deployment of these services, available at these 
    * If prompted, go ahead and enable Compute Engine for the project
 
 2. Create a g1-small instance running CentOS 7 with a 10 GB disk
-  ![Instance Configuration](vm_creation.png)
+  ![Instance Configuration](https://github.com/bloxgate/cs4263-gcp/blob/image-addition/vm_creation.PNG)
 
    1. Enable HTTP and HTTPS traffic
    2. Assign a static IP address to your VM
@@ -107,7 +107,7 @@ There is currently an existing deployment of these services, available at these 
          1. Assign a name of your choice and hit reserve
          2. Press done
          3. Hit the save button at the bottom of the page
-      ![Static External IP](vm_static_ip.png)
+      ![Static External IP](https://github.com/bloxgate/cs4263-gcp/blob/image-addition/vm_static_ip.PNG)
 
 3. Use the SSH button to connect to your VM
 
@@ -156,7 +156,7 @@ There is currently an existing deployment of these services, available at these 
           proxy_pass http://127.0.0.1:4567/;
       }
       ```
-    ![nginx configuration](nginx_conf.png)
+    ![nginx configuration](https://github.com/bloxgate/cs4263-gcp/blob/image-addition/nginx_conf.PNG)
 
    5. Save and exit
 
